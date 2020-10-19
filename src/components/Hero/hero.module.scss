@@ -1,0 +1,25 @@
+@import "../../../styles/config/config.scss";
+
+.herotext {
+  font-size: 140px;
+  line-height: 132px;
+  margin: 0 176px;
+}
+
+.herotext span {
+  color: var(--color-red);
+}
+
+.svgwrap {
+  margin: 16px 0 0 456px;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    margin-top: 0;
+    list-style: none;
+    li {
+      color: var(--color-white);
+    }
+  }
+}
