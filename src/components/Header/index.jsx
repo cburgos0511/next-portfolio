@@ -6,14 +6,18 @@ const Header = () => {
   return (
     <nav className={s.nav}>
       <Link href="/about">
-        <a className={s.nav__link}>about me</a>
+        <a data-text="about me" className={s.nav__link}>
+          about me
+        </a>
       </Link>
       <Link href="/work">
-        <a className={s.nav__link}>work</a>
+        <a data-text="work" className={s.nav__link}>
+          work
+        </a>
       </Link>
       <Link href="/contact">
-        <a className={s.nav__link} s>
-          contact me
+        <a data-text="contact" className={s.nav__link} s>
+          contact
         </a>
       </Link>
     </nav>

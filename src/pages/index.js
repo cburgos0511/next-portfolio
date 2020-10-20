@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ShortAbout from "../components/ShortAbout";
 import FeaturedWorks from "../components/FeaturedWorks";
+import ProjectInMind from "../components/ProjectInMind";
 
 // import Donut from "../components/Donut";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <ShortAbout />
         <FeaturedWorks />
+        <ProjectInMind />
       </div>
     </>
   );

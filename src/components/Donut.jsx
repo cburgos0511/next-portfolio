@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const Donut = ({
   top = "unset",
@@ -6,10 +7,21 @@ const Donut = ({
   left = "unset",
   right = "unset",
   bgColor = "#01BCD4",
+  move = -100,
 }) => {
+  const { scrollY } = useViewportScroll();
+  const y = useTransform(scrollY, [0, 2000], [0, move]);
   return (
-    <svg
-      style={{ position: "absolute", top, left, bottom, right, zIndex: -1 }}
+    <motion.svg
+      style={{
+        position: "absolute",
+        top,
+        left,
+        bottom,
+        right,
+        zIndex: -1,
+        y: y,
+      }}
       width="34"
       height="34"
       viewBox="0 0 34 34"
@@ -25,7 +37,7 @@ const Donut = ({
         rx="4.25"
         fill="black"
       />
-    </svg>
+    </motion.svg>
   );
 };
 

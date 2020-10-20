@@ -2,18 +2,62 @@
 
 .section {
   margin-top: 255px;
+  position: relative;
 }
 
 .header {
   position: relative;
   width: 35vw;
-  margin: auto;
+  margin: 0 auto 200px auto;
   &__text {
     font-size: 140px;
     line-height: 0.9;
   }
 }
 
+.work__container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
 /* INDIVIDUAL WORK */
 
+.work {
+  display: flex;
+  margin-bottom: 190px;
+  max-width: 100%;
 
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  &__texts {
+    margin-left: 54px;
+    margin-right: 54px;
+
+    width: 40%;
+    h3 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    p {
+      color: #9b9b9b;
+      padding-left: 48px;
+      font-size: 16px;
+      margin-top: 16px;
+    }
+  }
+
+  &__img {
+    max-width: 55%;
+    height: 154px;
+    overflow: hidden;
+    position: relative;
+    img {
+      filter: grayscale(100%);
+    }
+  }
+}

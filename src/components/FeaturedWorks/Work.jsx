@@ -1,17 +1,19 @@
 import React from "react";
 import s from "./works.module.scss";
 
-const Work = () => {
+const Work = ({ titleF, titleS, description, src }) => {
   return (
     <div className={s.work}>
-      <div>
+      <div className={s.work__texts}>
         <h3>
-          Running_ <br />
-          Tracker
+          {titleF} <br />
+          {titleS}
         </h3>
-        <p>Web application used to tract and visualized running data.</p>
+        <p>{description}</p>
       </div>
-      
+      <div className={s.work__img}>
+        <img src={src} alt="running" />
+      </div>
     </div>
   );
 };
