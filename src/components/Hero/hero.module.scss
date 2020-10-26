@@ -4,9 +4,10 @@
   font-size: 140px;
   line-height: 132px;
   margin: 0 176px;
+  overflow: hidden;
 }
 
-.herotext span {
+.herotext span:nth-child(1) {
   color: var(--color-red);
 }
 
@@ -16,10 +17,12 @@
   justify-content: center;
 
   ul {
-    margin-top: 0;
+    margin-top: 0px;
     list-style: none;
+    padding-left: 25px;
     li {
       color: var(--color-white);
+      font-weight: 600;
     }
   }
 }

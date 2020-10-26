@@ -1,10 +1,31 @@
 import React from "react";
 import Link from "next/link";
 import s from "./header.module.scss";
+import { motion } from "framer-motion";
+
+const nav = {
+  hidden: {
+    y: -100,
+  },
+  visible: {
+    y: 0,
+  },
+};
 
 const Header = () => {
   return (
-    <nav className={s.nav}>
+    <motion.nav
+      variants={nav}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        delay: -0.5,
+        type: "spring",
+        stiffness: 100,
+        velocity: 5,
+      }}
+      className={s.nav}
+    >
       <Link href="/about">
         <a data-text="about me" className={s.nav__link}>
           about me
@@ -20,7 +41,7 @@ const Header = () => {
           contact
         </a>
       </Link>
-    </nav>
+    </motion.nav>
   );
 };
 

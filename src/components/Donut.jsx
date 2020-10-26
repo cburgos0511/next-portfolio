@@ -1,6 +1,15 @@
 import React from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 
+const rect = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
 const Donut = ({
   top = "unset",
   bottom = "unset",
@@ -8,6 +17,7 @@ const Donut = ({
   right = "unset",
   bgColor = "#01BCD4",
   move = -100,
+  delay = 2,
 }) => {
   const { scrollY } = useViewportScroll();
   const y = useTransform(scrollY, [0, 2000], [0, move]);
@@ -28,7 +38,16 @@ const Donut = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="34" height="34" rx="12.0417" fill={bgColor} />
+      <motion.rect
+        variants={rect}
+        initial="hidden"
+        animate="visible"
+        transition={{ delay, duration: 1 }}
+        width="34"
+        height="34"
+        rx="12.0417"
+        fill={bgColor}
+      />
       <rect
         x="9.91667"
         y="9.91669"
