@@ -54,6 +54,7 @@ const FeaturedWorks = () => {
       <div className={s.work__container}>
         {data.map((work, i) => (
           <Work
+            key={work.id}
             index={i}
             titleS={work.titleS}
             titleF={work.titlef}

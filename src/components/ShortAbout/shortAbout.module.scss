@@ -3,7 +3,7 @@
 .container {
   display: flex;
   position: relative;
-  margin-top: 161px;
+  margin-top: 100px;
   padding: 0 260px;
 }
 .circle {
@@ -15,36 +15,51 @@
     display: flex;
     flex-direction: column;
     top: 45%;
-    left: 30%;
+    left: 35%;
     color: var(--color-white);
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 4px;
     font-weight: 300;
     text-transform: uppercase;
+    overflow: hidden;
   }
   &__date {
     position: absolute;
     display: flex;
-    top: 15%;
-    left: 75%;
-    font-size: 110px;
-    line-height: 22px;
-    font-weight: 600;
-    -webkit-text-fill-color: black;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+    top: 8%;
+    left: 70%;
+    height: 90px;
+
+    h1 {
+      position: relative;
+      font-size: 110px;
+      font-weight: 600;
+      margin: 0;
+      padding: 15px 0 0 0;
+      -webkit-text-fill-color: black;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0;
+    }
 
     &__month {
       display: flex;
       align-self: flex-end;
-      padding: 0 8px 16px 16px;
+      padding: 0 8px 0px 16px;
       font-size: 16px;
       font-weight: 600;
       flex-direction: column;
       width: 190px;
       -webkit-text-fill-color: white;
       -webkit-text-stroke-width: 1px;
+      overflow: hidden;
     }
   }
 }
