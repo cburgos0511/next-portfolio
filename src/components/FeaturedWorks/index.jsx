@@ -1,40 +1,41 @@
 import React from "react";
 import s from "./works.module.scss";
-import Work from "./Work";
+// import Work from "./Work";
 import Donut from "../Donut";
+import Slider from "./Slider";
 
 const data = [
   {
     id: 0,
-    titlef: "Running_",
+    titlef: "Running",
     titleS: "Tracker",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
-    src: "/running.jpg",
+    src: "/burgos.jpg",
   },
   {
     id: 1,
-    titlef: "Running_",
+    titlef: "Running",
     titleS: "Tracker",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
-    src: "/running.jpg",
+    src: "/burgos.jpg",
   },
   {
     id: 2,
-    titlef: "Running_",
+    titlef: "Running",
     titleS: "Tracker",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
-    src: "/running.jpg",
+    src: "/burgos.jpg",
   },
   {
     id: 3,
-    titlef: "Running_",
+    titlef: "Running",
     titleS: "Tracker",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
-    src: "/running.jpg",
+    src: "/burgos.jpg",
   },
 ];
 
@@ -52,16 +53,7 @@ const FeaturedWorks = () => {
         </h1>
       </div>
       <div className={s.work__container}>
-        {data.map((work, i) => (
-          <Work
-            key={work.id}
-            index={i}
-            titleS={work.titleS}
-            titleF={work.titlef}
-            description={work.description}
-            src={work.src}
-          />
-        ))}
+        <Slider data={data} />
       </div>
     </section>
   );

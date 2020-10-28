@@ -135,3 +135,29 @@ body {
   overflow: hidden;
   height: 100%;
 }
+
+.next,
+.prev {
+  top: calc(35% - 20px);
+  position: absolute;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+span {
+  position: relative;
+}
