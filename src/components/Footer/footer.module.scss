@@ -1,0 +1,58 @@
+@import "../../../styles/config/config.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 250px;
+  background: var(--color-red);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 220px;
+    height: 50px;
+    width: 100%;
+    &__left {
+      display: flex;
+    }
+    li {
+      color: var(--color-white);
+      list-style: none;
+      padding: 16px 36px;
+      overflow: hidden;
+    }
+  }
+}
+
+.totop {
+  cursor: crosshair;
+  span {
+    color: transparent;
+
+    &:before,
+    &:after {
+      content: attr(data-text);
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      color: var(--color-white);
+      padding: 5px 0;
+      transition: 0.5s;
+    }
+    &::before {
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+    &:hover:before {
+      color: var(--color-white);
+      transform: translate(0, -2px);
+    }
+    &::after {
+      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    }
+    &:hover:after {
+      color: var(--color-white);
+      transform: translate(0, 2px);
+    }
+  }
+}

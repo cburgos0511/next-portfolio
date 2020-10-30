@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import s from "./works.module.scss";
-// import Work from "./Work";
 import Donut from "../Donut";
 import Slider from "./Slider";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   {
@@ -40,6 +43,19 @@ const data = [
 ];
 
 const FeaturedWorks = () => {
+  useEffect(() => {
+    gsap.from("#feature", {
+      scrollTrigger: "#feature",
+      y: 120,
+      duration: 1.1,
+    });
+    gsap.from("#work", {
+      scrollTrigger: "#work",
+      y: 120,
+      duration: 1.1,
+    });
+  });
+
   return (
     <section className={s.section}>
       <Donut move={-450} top="8%" left="2%" />
@@ -47,10 +63,14 @@ const FeaturedWorks = () => {
       <Donut move={-120} top="65%" left="16%" />
       <Donut move={-360} bottom="5%" right="5%" />
       <div className={s.header}>
-        <h1 className={s.header__text}>
-          <span>featured_</span> <br />
-          <span>works</span>
-        </h1>
+        <div className={s.header__text}>
+          <div style={{ width: "65vw" }} className="hidden">
+            <h1 id="feature">featured_</h1>
+          </div>
+          <div className="hidden">
+            <h1 id="work">works</h1>
+          </div>
+        </div>
       </div>
       <div className={s.work__container}>
         <Slider data={data} />

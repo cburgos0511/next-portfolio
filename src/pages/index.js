@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import ShortAbout from "../components/ShortAbout";
 import FeaturedWorks from "../components/FeaturedWorks";
 import ProjectInMind from "../components/ProjectInMind";
+import Footer from "../components/Footer";
 
 // import Donut from "../components/Donut";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <FeaturedWorks />
         <ProjectInMind />
       </div>
+      <Footer />
     </>
   );
 }

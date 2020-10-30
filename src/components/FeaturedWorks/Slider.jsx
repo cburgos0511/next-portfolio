@@ -136,7 +136,7 @@ const Slider = ({ data }) => {
           <path
             d="M48.669 25.3344L25.3345 48.6689L20.3847 43.7192L39.4113 24.6926L20.6676 6.6668L25.3345 1.9999L48.669 25.3344Z"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </div>
@@ -151,7 +151,7 @@ const Slider = ({ data }) => {
           <path
             d="M2.00001 25.3345L25.3345 2L30.2843 6.94975L11.2577 25.9764L30.0014 44.0021L25.3345 48.669L2.00001 25.3345Z"
             stroke="white"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </div>

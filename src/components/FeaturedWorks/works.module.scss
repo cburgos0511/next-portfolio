@@ -10,8 +10,11 @@
   width: 35vw;
   margin: 0 auto 200px auto;
   &__text {
-    font-size: 140px;
-    line-height: 0.9;
+    h1 {
+      font-size: 140px;
+      line-height: 0.9;
+      margin: 0;
+    }
   }
 }
 
@@ -36,7 +39,6 @@
   &__texts {
     margin-left: 54px;
     margin-right: 54px;
-
     width: 40%;
     h3 {
       margin: 0;

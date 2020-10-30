@@ -15,6 +15,7 @@ const nav = {
 const Header = () => {
   return (
     <motion.nav
+      id="top"
       variants={nav}
       initial="hidden"
       animate="visible"
@@ -37,7 +38,7 @@ const Header = () => {
         </a>
       </Link>
       <Link href="/contact">
-        <a data-text="contact" className={s.nav__link} s>
+        <a data-text="contact" className={s.nav__link}>
           contact
         </a>
       </Link>
