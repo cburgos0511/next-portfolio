@@ -60,9 +60,9 @@ const ShortAbout = () => {
             animate="visible"
             transition={{ duration: 1.4, delay: 1.3 }}
           >
-            <span>Show</span>
+            <span>Freelace</span>
             <br />
-            <span>Creativity</span>
+            <span>Developer</span>
           </motion.p>
         </div>
         <div className={s.circle__date}>
@@ -99,13 +99,13 @@ const ShortAbout = () => {
         >
           <span className="hidden">
             <motion.span variants={pSpan}>
-              I am a developer and UX/UI designer based in Italy.
+              I am a full stack developer and freelancer based in US.
             </motion.span>
           </span>
 
           <span className="hidden">
             <motion.span variants={pSpan}>
-              National and international customers have relied on me for design,
+              National customers have relied on me for design,
             </motion.span>
           </span>
           <span className="hidden">
@@ -115,7 +115,7 @@ const ShortAbout = () => {
           </span>
           <span className="hidden">
             <motion.span variants={pSpan}>
-              As a freelancer, I works also with web agencies, companies,
+              As a developer, I also work with web companies,
             </motion.span>
           </span>
           <span className="hidden">
@@ -127,7 +127,7 @@ const ShortAbout = () => {
 
           <span className="hidden">
             <motion.span variants={pSpan}>
-              Also, Judge at CSSDA and Envato Author.
+              Also, enjoy learning new tech and running.
             </motion.span>
           </span>
         </motion.p>

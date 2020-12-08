@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import s from "./header.module.scss";
 import { motion } from "framer-motion";
+import ContactForm from "../Contact/Form";
 
 const nav = {
   hidden: {
@@ -12,7 +13,28 @@ const nav = {
   },
 };
 
-const Header = () => {
+const Header = ({ handleOpen }) => {
+  const [formState, setFormState] = useState({
+    initial: false,
+    clicked: null,
+  });
+
+  const handleForm = () => {
+    if (formState.initial === false) {
+      setFormState({
+        initial: null,
+        clicked: true,
+      });
+    } else if (formState.clicked === true) {
+      setFormState({
+        clicked: !formState.clicked,
+      });
+    } else if (formState.clicked === false) {
+      setFormState({
+        clicked: !formState.clicked,
+      });
+    }
+  };
   return (
     <motion.nav
       id="top"
@@ -27,21 +49,16 @@ const Header = () => {
       }}
       className={s.nav}
     >
-      <Link href="/about">
+      <ContactForm state={formState} onClose={handleForm} />
+
+      <Link href="#about">
         <a data-text="about me" className={s.nav__link}>
           about me
         </a>
       </Link>
-      <Link href="/work">
-        <a data-text="work" className={s.nav__link}>
-          work
-        </a>
-      </Link>
-      <Link href="/contact">
-        <a data-text="contact" className={s.nav__link}>
-          contact
-        </a>
-      </Link>
+      <a onClick={handleForm} data-text="contact" className={s.nav__link}>
+        contact
+      </a>
     </motion.nav>
   );
 };

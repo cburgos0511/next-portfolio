@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
 import s from "./works.module.scss";
@@ -65,7 +65,7 @@ const Slider = ({ data }) => {
           exit="exit"
           transition={{
             x: { type: "spring", stiffness: 300, damping: 30 },
-            duration: 1.4,
+            duration: 2.4,
           }}
         >
           <motion.div className={s.content}>
@@ -109,7 +109,7 @@ const Slider = ({ data }) => {
             >
               <div className="hidden">
                 <motion.h3 variants={word} transition={{ duration: 1.5 }}>
-                  Web application
+                  {data[imageIndex].cate}
                 </motion.h3>
               </div>
               <div className="hidden">

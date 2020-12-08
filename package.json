@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
+    "axios": "^0.21.0",
+    "formik": "^2.2.5",
     "framer-motion": "^2.9.1",
     "gsap": "^3.5.1",
     "next": "9.5.5",

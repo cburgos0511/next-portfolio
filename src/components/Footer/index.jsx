@@ -6,18 +6,22 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+  useEffect(() => {
+    gsap.from(`#footer`, {
+      scrollTrigger: `#footer`,
+      y: 240,
+      duration: 1.1,
+    });
+  });
   return (
     <footer id="footer" className={s.footer}>
       <ul className={s.footer__container}>
         <div className={s.footer__container__left}>
           <li>
-            <a href="/">dribble</a>
+            <a href="https://www.linkedin.com/in/cburgi0511/">linkedin</a>
           </li>
           <li>
-            <a href="/">dribble</a>
-          </li>
-          <li>
-            <a href="/">dribble</a>
+            <a href="https://github.com/">github</a>
           </li>
         </div>
         <div>

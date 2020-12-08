@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
         <title>Cruz Burgos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Header />
       <div style={{ margin: "0 10% 0 10%" }}>
         <Hero />

@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./projectInMind.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import ContactForm from "../Contact/Form";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectInMind = () => {
@@ -23,9 +24,32 @@ const ProjectInMind = () => {
     });
     handleFadeUp();
   });
+  const [formState, setFormState] = useState({
+    initial: false,
+    clicked: null,
+  });
+
+  const handleForm = () => {
+    if (formState.initial === false) {
+      setFormState({
+        initial: null,
+        clicked: true,
+      });
+    } else if (formState.clicked === true) {
+      setFormState({
+        clicked: !formState.clicked,
+      });
+    } else if (formState.clicked === false) {
+      setFormState({
+        clicked: !formState.clicked,
+      });
+    }
+  };
 
   return (
     <section className={s.section}>
+      <ContactForm state={formState} onClose={handleForm} />
+
       <div className="hidden">
         <h1 id="text-1" className={s.projInMind}>
           I’m always
@@ -62,7 +86,7 @@ const ProjectInMind = () => {
         </h1>
       </div>
       <div id="text-8">
-        <h1 data-text="Let's Talk" className={s.letstalk}>
+        <h1 onClick={handleForm} data-text="Let's Talk" className={s.letstalk}>
           Let's Talk.
         </h1>
       </div>

@@ -10,35 +10,31 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     id: 0,
-    titlef: "Running",
-    titleS: "Tracker",
+    titlef: "Web",
+    titleS: "Developer",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
     src: "/burgos.jpg",
+    cate: "Work & Career",
   },
   {
     id: 1,
-    titlef: "Running",
-    titleS: "Tracker",
+    titlef: "Ultra",
+    titleS: "Marathoner",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
     src: "/burgos.jpg",
+    cate: "Life & Hobby",
   },
+
   {
     id: 2,
-    titlef: "Running",
-    titleS: "Tracker",
+    titlef: "Programming",
+    titleS: "Student",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
     src: "/burgos.jpg",
-  },
-  {
-    id: 3,
-    titlef: "Running",
-    titleS: "Tracker",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, similique.",
-    src: "/burgos.jpg",
+    cate: "Work & Career",
   },
 ];
 
@@ -57,7 +53,7 @@ const FeaturedWorks = () => {
   });
 
   return (
-    <section className={s.section}>
+    <section id="about" className={s.section}>
       <Donut move={-450} top="8%" left="2%" />
       <Donut move={-240} top="20%" right="10%" />
       <Donut move={-120} top="65%" left="16%" />
@@ -65,10 +61,10 @@ const FeaturedWorks = () => {
       <div className={s.header}>
         <div className={s.header__text}>
           <div style={{ width: "65vw" }} className="hidden">
-            <h1 id="feature">featured_</h1>
+            <h1 id="feature">a bit_</h1>
           </div>
           <div className="hidden">
-            <h1 id="work">works</h1>
+            <h1 id="work">off me</h1>
           </div>
         </div>
       </div>
